@@ -9,6 +9,11 @@ import ArticleDetail from "../Pages/Article/ArticleDetail";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import AdminDashboardLayout from "../Layout/AdminDashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
+import AllArticles from "../Pages/Dashboard/AllArticles/AllArticles";
+import AddPublisher from "../Pages/Dashboard/AddPublisher/AddPublisher";
 
 const Router = () => {
     return (
@@ -28,17 +33,12 @@ const Router = () => {
                 <Route path="/register" element={<Register></Register>} />
             </Route>
 
-            {/* 
-            <Route element={<AuthLayout />}>
-                <Route path="login" element={<Login />} />
-                <Route path="register" element={<Register />} />
-            </Route> */}
-
-            {/* <Route path="concerts">
-                <Route index element={<ConcertsHome />} />
-                <Route path=":city" element={<City />} />
-                <Route path="trending" element={<Trending />} />
-            </Route> */}
+            <Route path="dashboard" element={<AdminDashboardLayout></AdminDashboardLayout>}>
+                <Route index element={<Dashboard />} />
+                <Route path="users" element={<AllUsers></AllUsers>} />
+                <Route path="articles" element={<AllArticles></AllArticles>} />
+                <Route path="add-publishers" element={<AddPublisher></AddPublisher>} />
+            </Route>
         </Routes>
     );
 };
