@@ -5,6 +5,7 @@ import AddArticle from "../Pages/Article/AddArticle";
 import Articles from "../Pages/Article/Articles";
 import Subscription from "../Pages/Subscription/Subscription";
 import MyArticles from "../Pages/Article/MyArticles";
+import ArticleDetail from "../Pages/Article/ArticleDetail";
 
 const Router = () => {
     return (
@@ -15,7 +16,7 @@ const Router = () => {
                 <Route index element={<App></App>} />
                 <Route path="/add-article" element={<AddArticle></AddArticle>} />
                 <Route path="/articles" element={<Articles></Articles>} />
-                <Route path="/articles" element={<Articles></Articles>} />
+                <Route path="/articles/:id" element={<ArticleDetail></ArticleDetail>} />
                 <Route path="/subscription" element={<Subscription></Subscription>} />
                 <Route path="/my-articles" element={<MyArticles></MyArticles>} />
             </Route>
