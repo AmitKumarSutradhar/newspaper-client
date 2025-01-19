@@ -4,14 +4,16 @@ import { NavLink } from "react-router";
 const NavBar = () => {
 
     const navLinks = <>
-         <li><NavLink to={'/'}>Home</NavLink></li>
-         <li><NavLink to={"/add-article"}>Add Articles</NavLink></li>
-         <li><NavLink to={"/articles"}>All Articles</NavLink></li>
-         <li><NavLink to={"/subscription"}>Subscription</NavLink></li>
-         <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
-         <li><NavLink to={"/my-articles"}>My Articles</NavLink></li>
-         <li><NavLink to={"/premium-articles"}>Premium Articles</NavLink></li>
+        <li><NavLink to={'/'}>Home</NavLink></li>
+        <li><NavLink to={"/add-article"}>Add Articles</NavLink></li>
+        <li><NavLink to={"/articles"}>All Articles</NavLink></li>
+        <li><NavLink to={"/subscription"}>Subscription</NavLink></li>
+        <li><NavLink to={"/dashboard"}>Dashboard</NavLink></li>
+        <li><NavLink to={"/my-articles"}>My Articles</NavLink></li>
+        <li><NavLink to={"/premium-articles"}>Premium Articles</NavLink></li>
     </>
+
+    const user = false;
 
     return (
         <div className="navbar bg-base-100">
@@ -49,7 +51,28 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn">Button</a>
+
+                {
+                    user ?
+                        <>
+                            <NavLink to={"/login"}  className="btn">Logout</NavLink>
+                            <div className="">
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        alt="Tailwind CSS Navbar component"
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
+                            </div>
+
+                        </>
+                        :
+                        <>
+                            <NavLink to={"/login"} className="btn">Login</NavLink>
+                            <NavLink to={"/register"}  className="btn">Register</NavLink>
+                        </>
+                }
+
+
             </div>
         </div>
     );

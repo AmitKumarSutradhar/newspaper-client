@@ -6,6 +6,8 @@ import Articles from "../Pages/Article/Articles";
 import Subscription from "../Pages/Subscription/Subscription";
 import MyArticles from "../Pages/Article/MyArticles";
 import ArticleDetail from "../Pages/Article/ArticleDetail";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Register/Register";
 
 const Router = () => {
     return (
@@ -19,6 +21,10 @@ const Router = () => {
                 <Route path="/articles/:id" element={<ArticleDetail></ArticleDetail>} />
                 <Route path="/subscription" element={<Subscription></Subscription>} />
                 <Route path="/my-articles" element={<MyArticles></MyArticles>} />
+
+
+                <Route path="/login" element={<Login></Login>} />
+                <Route path="/register" element={<Register></Register>} />
             </Route>
 
             {/* 
