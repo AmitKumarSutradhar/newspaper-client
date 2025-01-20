@@ -49,10 +49,11 @@ const AddArticle = () => {
                 publisher: data.publisher,
                 tags: data.tags,
                 description: data.description,
-                image: res.data.data.display_url
+                image: res.data.data.display_url,
+                status: "pending"
             }
 
-            const articleRes = await axiosPublic.post('/atricles', articleInfo);
+            const articleRes = await axiosPublic.post('/articles', articleInfo);
             console.log(articleRes.data)
 
             if (articleRes.data.insertedId) {

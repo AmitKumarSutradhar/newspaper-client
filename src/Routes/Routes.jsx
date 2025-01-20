@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router";
-import App from "../App";
 import MainLayout from "../Layout/MainLayout";
 import AddArticle from "../Pages/Article/AddArticle";
 import Articles from "../Pages/Article/Articles";
@@ -14,14 +13,14 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import AllUsers from "../Pages/Dashboard/AllUsers/AllUsers";
 import AllArticles from "../Pages/Dashboard/AllArticles/AllArticles";
 import AddPublisher from "../Pages/Dashboard/AddPublisher/AddPublisher";
+import ErrorPage from "../Pages/Error/ErrorPage";
+import Home from "../Pages/Home/Home";
 
 const Router = () => {
     return (
         <Routes>
-
-
             <Route element={<MainLayout />}>
-                <Route index element={<App></App>} />
+                <Route index element={<Home></Home>} />
                 <Route path="/add-article" element={<PrivateRoute><AddArticle></AddArticle></PrivateRoute>} />
                 <Route path="/articles" element={<Articles></Articles>} />
                 <Route path="/articles/:id" element={<PrivateRoute><ArticleDetail></ArticleDetail></PrivateRoute>} />
@@ -39,6 +38,8 @@ const Router = () => {
                 <Route path="articles" element={<AllArticles></AllArticles>} />
                 <Route path="add-publishers" element={<AddPublisher></AddPublisher>} />
             </Route>
+
+            <Route path='*' element={<ErrorPage></ErrorPage>} />
         </Routes>
     );
 };
