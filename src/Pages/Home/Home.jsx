@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import TrendingArticles from "./TrendingArticles/TrendingArticles";
+import PlanPackages from "./PlanPackages/PlanPackages";
 
 
 const Home = () => {
@@ -22,8 +23,9 @@ const Home = () => {
 
     return (
         <div>
-            <h2>This is Home page </h2>
             <TrendingArticles></TrendingArticles>
+            <PlanPackages></PlanPackages>
+
 
             {/* You can open the modal using document.getElementById('ID').showModal() method */}
             {/* <button className="btn" onClick={() => document.getElementById('my_modal_3').showModal()}>open modal</button> */}
