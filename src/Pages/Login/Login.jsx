@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Helmet } from "react-helmet-async";
-import { useLocation, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
 
@@ -59,9 +59,11 @@ const Login = () => {
                         <input type="password" name="password" placeholder="password" className="input input-bordered" required />
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn btn-primary">Register</button>
+                        <button className="btn btn-primary">Log In</button>
                     </div>
                 </form>
+ 
+                 <p className="px-6 my-4 text-center">New user? <Link to="/register">Register Now</Link></p>
 
             </div>
         </>

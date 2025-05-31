@@ -110,7 +110,7 @@ const Register = () => {
                     </div>
                 </form>
 
-                <p className="px-6"><small>Already have an account <Link to="/login">Login</Link></small></p>
+                <p className="px-6 my-4 text-center">Already have an account <Link to="/login">Login</Link></p>
 
             </div>
         </>

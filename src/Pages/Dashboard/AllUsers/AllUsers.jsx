@@ -61,9 +61,7 @@ const AllUsers = () => {
 
     return (
         <div>
-
-
-            <div className="overflow-x-auto">
+            <div className="">
                 <h2 className='text-4xl text-left p-3'>All Users</h2>
 
                 <table className="table">
@@ -77,7 +75,7 @@ const AllUsers = () => {
                             </th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Role</th>
+                            <th>Profile Picture</th>
                             <th>Action</th>
                         </tr>
                     </thead>
@@ -120,7 +118,7 @@ const AllUsers = () => {
 
                                     </td>
                                     <th>
-                                        <button className="btn btn-ghost btn-xs">details</button>
+                                        <button className="btn">Make Admin</button>
                                     </th>
                                 </tr>
                             )
@@ -128,16 +126,6 @@ const AllUsers = () => {
                         }
 
                     </tbody>
-                    {/* foot */}
-                    <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Job</th>
-                            <th>Favorite Color</th>
-                            <th></th>
-                        </tr>
-                    </tfoot>
                 </table>
             </div>
         </div>
